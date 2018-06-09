@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Metal DB</title>
+
+<script type="text/javascript">
+
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-image: url(background.jpg);
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+}
+
+h1,p {color:red; text-align:center; font-family:Palatino, 'Book Antiqua', serif}
+select {color:red; background-color:black; text-align:center; font-size:10pt; font-family:Palatino, 'Book Antiqua', serif}
+
+#searchbar {color:red; background-color:black; border-color:red; font-size:10pt; font-family:Palatino, 'Book Antiqua', serif}
+
+.pressButtons {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background-color:black;
+		border-color:red;
+		color:red;
+		font-size:10pt;
+		font-family:Palatino, 'Book Antiqua', serif
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+	
+
+	<h1>
+    	Metal Album Database
+    </h1>
+    
+	<p>
+    	Search our database for metal albums released in the last 10 years. Search by artist, genre, year, or search the album name to see the details.
+    </p>
+    <p>
+    	Press the "Show All" button to display all albums in the database.
+    <!-- Form with the address of the php script to post to -->
+    <form action="https://cs1.ucc.ie/~cth1/assignment.php" name="form1" method="post">
+    	<p>
+        	<label>
+      			Please enter search value
+                	<!-- Searchbar for user values -->
+        			<input type="text" name="searchbar" id="searchbar">
+    		</label>
+            
+            <!-- Parameters to filter the search -->
+            <select name="filter" id="filter">
+      			<option value="title">Album Title</options>
+       			<option value="artist">Artist</options>
+      			<option value="genre">Genre</options>
+     			<option value="year">Year</options>
+    		</select>
+            
+            <!-- Submit buttons to post to the php -->
+        	<input class="pressButtons" type="submit" value="Search" name="submit">
+            <input class="pressButtons" type="submit" value="Show All" name="all">
+        </p>
+    </form>
+    
+</body>
+</html>
